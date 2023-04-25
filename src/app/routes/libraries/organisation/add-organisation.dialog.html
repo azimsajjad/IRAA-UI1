@@ -1,0 +1,34 @@
+<h1 mat-dialog-title>Organisation Details</h1>
+<form [formGroup]="form">
+  <mat-dialog-content class="mat-typography">
+    <div>
+      <mat-form-field class="w-full">
+        <mat-label>Organisation</mat-label>
+        <input matInput formControlName="organization" />
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="w-full">
+        <mat-label>Description</mat-label>
+        <input matInput formControlName="organization_description" />
+      </mat-form-field>
+    </div>
+  </mat-dialog-content>
+
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close type="reset" (click)="close('reset')">
+      Cancel
+    </button>
+    <button
+      mat-button
+      [mat-dialog-close]="true"
+      cdkFocusInitial
+      type="submit"
+      (click)="close('save')"
+      [disabled]="form.invalid"
+    >
+      Save
+    </button>
+  </mat-dialog-actions>
+</form>

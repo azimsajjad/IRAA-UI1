@@ -1,0 +1,23 @@
+section {
+  height: calc(100vh - 142px);
+}
+
+mat-sidenav-container {
+  height: calc(100vh - 64px);
+}
+
+mat-expansion-panel {
+  box-shadow: none !important;
+  margin-bottom: 0 !important;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.button-container {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+}
